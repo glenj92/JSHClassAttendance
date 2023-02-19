@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/blue_texture">
+
+    <Button
+        android:id="@+id/btadminescri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Tvadmin2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvadminT"
+        android:text="Escribir Tag" 
+        android:textSize="40sp"
+        android:textColor="#FFFF00"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btadminasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvadminT"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Tvadmint1"
+        android:text="Asistencias" 
+        android:textSize="40sp"
+        android:textColor="#FFFF00"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/tvadminT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/canvas_darkblue"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/Tvadmint1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/canvas_darkblue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/Tvadmin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/canvas_darkblue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

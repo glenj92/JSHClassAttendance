@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:focusable="true"
+    android:background="@drawable/fondo_amarillo"
+  android:focusableInTouchMode="true"
+    tools:context=".MainActivity" >
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvescribemensajenfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Escribe los datos del estudiante: "
+               
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edtIdentificacionEscriNfc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:ems="10"
+                 
+                android:hint="Identificacion"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/edtNombreCompletoEscriNfc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                 
+                android:hint="Nombres"
+                android:inputType="textCapCharacters" >
+
+                
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtApellidoEsciNfc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ems="10"
+                 
+                android:hint="Apellidos"
+                android:inputType="textCapCharacters" />
+
+            <Button
+                android:id="@+id/botonEscribirTAgNfcDato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_marginTop="45dp"
+                android:text="Escribir Tag!!" />
+
+            <TextView
+                android:id="@+id/tvobteninfotag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="180px"
+                android:gravity="center"
+                
+                android:text="Obten informacion de la Tag"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvacercatelefono"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                
+                android:text="acercandola al dispositivo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

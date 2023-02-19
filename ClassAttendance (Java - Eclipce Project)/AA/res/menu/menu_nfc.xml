@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/action_search" 
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search" 
+        android:showAsAction="always"
+        android:actionViewClass="android.widget.SearchView"></item>
+    
+    <item android:id="@+id/atraznfc" 
+        android:title="Atraz" 
+        android:icon="@android:drawable/ic_menu_revert" 
+        android:showAsAction="always"></item>
+    
+    <item android:id="@+id/action_darporvista" 
+        android:title="Dar clase por vista" 
+        android:showAsAction="always" 
+        android:icon="@android:drawable/ic_menu_view"></item>
+    
+    <item android:id="@+id/action_guardar" 
+        android:title="Agregar Estudiante" 
+        android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="always"></item>
+    
+    
+    
+
+</menu>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/spots_fundo_faded">
+    
+     <HorizontalScrollView
+         android:id="@+id/horizontalScrollView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+               android:layout_width="wrap_content"
+                android:layout_height="50px" 
+                android:background="@drawable/canvas_darkblue" >
+
+                <TextView
+                    android:id="@+id/asignatitulode"
+                     android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ASIGNATURA"
+                android:textSize="13sp"
+                 android:textColor="#ffffff"
+                android:textStyle="italic|bold"  android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/grupotitulode"
+                     android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GRUPO"
+                android:textSize="13sp"
+                 android:textColor="#ffffff"
+                android:textStyle="italic|bold"  android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/totalclasestitulode"
+                     android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TOTAL DE CLASES"
+                android:textSize="13sp"
+                 android:textColor="#ffffff"
+                android:textStyle="italic|bold"  android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/asignatitulodedatos"
+                   android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="asignatura"
+                android:textSize="13sp"
+                android:textStyle="bold" android:textColor="#FFFF00"  android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/grupotitulodedatos"
+                    android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="grupo"
+                android:textSize="13sp"
+                android:textStyle="bold"  android:textColor="#FFFF00"  android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/totalclasestitulodedatos"
+                    android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="total clase"
+                android:textSize="13sp"
+                android:textStyle="bold" android:textColor="#FFFF00"  android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50px" 
+                android:background="@drawable/canvas_darkblue">
+
+                <TextView
+                android:id="@+id/noidentLstGentv"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No IDENTIDAD"
+                android:textSize="13sp"
+                 android:textColor="#ffffff"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/apeLstGentv"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="APELLIDO"
+                 android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/nameListGentv"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                 android:textColor="#ffffff"
+                android:text="NOMBRE"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvralla1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/noasisLstGentv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No ASIS"
+                android:gravity="center"
+                 android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/nofallaLstGentv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No FALL"
+                android:textStyle="bold"
+                android:gravity="center"
+                 android:textColor="#ffffff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/noexcusaLstGentv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="No EXC"
+                android:textStyle="bold"
+                android:gravity="center"
+                 android:textColor="#ffffff"
+                android:textSize="13sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/LVlstaGeneralAsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                
+                android:divider="#99CC00"
+                
+                android:dividerHeight="3sp" >
+            </ListView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

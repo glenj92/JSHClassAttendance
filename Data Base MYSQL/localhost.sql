@@ -1,0 +1,415 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 30-10-2014 a las 12:15:00
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `asistenciasdb`
+--
+CREATE DATABASE `asistenciasdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `asistenciasdb`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `acceso_as`
+--
+
+CREATE TABLE IF NOT EXISTS `acceso_as` (
+  `idDoc` bigint(20) NOT NULL,
+  `pword` varchar(10) NOT NULL,
+  `perfil` int(5) NOT NULL,
+  UNIQUE KEY `idDoc` (`idDoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `acceso_as`
+--
+
+INSERT INTO `acceso_as` (`idDoc`, `pword`, `perfil`) VALUES
+(11, '11', 1),
+(112233, 'ADMIN', 3),
+(123456, 'd1234', 2),
+(999000, '999000', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asignatura_as`
+--
+
+CREATE TABLE IF NOT EXISTS `asignatura_as` (
+  `codMate` bigint(20) NOT NULL,
+  `nomMate` varchar(70) NOT NULL,
+  `codCurso` bigint(20) NOT NULL,
+  PRIMARY KEY (`codMate`),
+  KEY `codCurso` (`codCurso`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `asignatura_as`
+--
+
+INSERT INTO `asignatura_as` (`codMate`, `nomMate`, `codCurso`) VALUES
+(111, 'BASE DE DATOS', 1456),
+(112, 'GESTION TECNOLOGICA', 1456),
+(113, 'HUMANIDADES', 1456),
+(222, 'INGENIERIA DE SOFTWARE', 1456),
+(333, 'SISTEMAS OPERATIVOS', 1456),
+(444, 'ESTRUCTURA DE DATOS', 1456),
+(555, 'ANALISIS Y DISENO DE SOFTWARE', 1456),
+(666, 'QUIMICA I', 3642),
+(920, 'ECONOMIA', 3323),
+(930, 'SISTEMAS DE INFORMACION', 1456),
+(940, 'CONTABILIDAD', 3323),
+(999, 'PROGRAMACION ORIENTADA A OBJETOS', 1456),
+(7777, 'FISICA', 3642);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asistencia_as`
+--
+
+CREATE TABLE IF NOT EXISTS `asistencia_as` (
+  `idEstu` bigint(20) NOT NULL,
+  `codGrupo` varchar(30) NOT NULL,
+  `fechaAsis` date NOT NULL,
+  `excusa` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idEstu`,`codGrupo`,`fechaAsis`),
+  KEY `codGrupo` (`codGrupo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `asistencia_as`
+--
+
+INSERT INTO `asistencia_as` (`idEstu`, `codGrupo`, `fechaAsis`, `excusa`) VALUES
+(114444, 'N120143323940', '2014-10-27', 0),
+(114444, 'T120141456111', '2014-05-18', 0),
+(198438, 'N120143323940', '2014-05-23', 0),
+(198438, 'T120141456111', '2014-05-18', 1),
+(335268, 'T120141456111', '2014-05-16', 1),
+(335268, 'T120141456111', '2014-05-18', 1),
+(498356, 'N120143323940', '2014-05-23', 0),
+(498356, 'T120141456111', '2014-05-16', 1),
+(498356, 'T120141456111', '2014-05-18', 1),
+(574637, 'T120141456111', '2014-05-16', 1),
+(574637, 'T120141456111', '2014-05-18', 1),
+(692764, 'N120143323940', '2014-05-23', 0),
+(692764, 'T120141456111', '2014-05-16', 1),
+(692764, 'T120141456111', '2014-05-18', 1),
+(737526, 'N120143323940', '2014-05-23', 1),
+(737526, 'T120141456111', '2014-05-16', 1),
+(737526, 'T120141456111', '2014-05-18', 1),
+(852527, 'N120143323940', '2014-05-23', 0),
+(852527, 'N120143323940', '2014-10-27', 0),
+(852527, 'T120141456111', '2014-05-18', 1),
+(920376, 'N120143323940', '2014-05-20', 0),
+(920376, 'T120141456111', '2014-05-18', 1),
+(1052628, 'T120141456111', '2014-05-16', 0),
+(1052628, 'T120141456111', '2014-05-18', 1),
+(1112365, 'N120143323940', '2014-05-20', 0),
+(1112365, 'N120143323940', '2014-05-23', 0),
+(1112365, 'T120141456111', '2014-05-16', 0),
+(1112365, 'T120141456111', '2014-05-18', 1),
+(1462668, 'T120141456111', '2014-05-18', 1),
+(2374853, 'N120143323940', '2014-05-23', 0),
+(2374853, 'N120143323940', '2014-10-27', 0),
+(2374853, 'N220141456930', '2014-10-29', 0),
+(2374853, 'T120141456111', '2014-05-16', 1),
+(2374853, 'T120141456111', '2014-05-18', 1),
+(9234442, 'N120143323940', '2014-10-27', 0),
+(9234442, 'N220141456930', '2014-10-29', 0),
+(9234442, 'T120141456111', '2014-05-18', 1),
+(10087367, 'T120141456111', '2014-05-16', 0),
+(10087367, 'T120141456111', '2014-05-18', 1),
+(10087367, 'T120141456111', '2014-05-19', 0),
+(12727223, 'T120141456111', '2014-05-18', 1),
+(12830002, 'T120141456111', '2014-05-16', 0),
+(12830002, 'T120141456111', '2014-05-18', 1),
+(17065652, 'T120141456111', '2014-05-18', 1),
+(31012014, 'N120143323940', '2014-05-23', 0),
+(31012014, 'T120141456111', '2014-05-16', 1),
+(31012014, 'T120141456111', '2014-05-18', 1),
+(40423967, 'T120141456111', '2014-05-16', 1),
+(40423967, 'T120141456111', '2014-05-18', 1),
+(110832762, 'T120141456111', '2014-05-18', 0),
+(110832762, 'T120141456111', '2014-05-19', 0),
+(123456789, 'N120143323940', '2014-05-23', 0),
+(123456789, 'T120141456111', '2014-05-16', 0),
+(123456789, 'T120141456111', '2014-05-18', 1),
+(156728829, 'T120141456111', '2014-05-18', 1),
+(166735423, 'T120141456111', '2014-05-18', 1),
+(183439782, 'T120141456111', '2014-05-16', 1),
+(183439782, 'T120141456111', '2014-05-18', 1),
+(190928428, 'T120141456111', '2014-05-16', 1),
+(190928428, 'T120141456111', '2014-05-18', 1),
+(208438770, 'T120141456111', '2014-05-16', 0),
+(208438770, 'T120141456111', '2014-05-18', 1),
+(300687267, 'T120141456111', '2014-05-16', 0),
+(300687267, 'T120141456111', '2014-05-18', 1),
+(609835887, 'T120141456111', '2014-05-16', 0),
+(609835887, 'T120141456111', '2014-05-18', 1),
+(704863733, 'N120143323940', '2014-10-27', 0),
+(704863733, 'T120141456111', '2014-05-16', 1),
+(704863733, 'T120141456111', '2014-05-18', 1),
+(807522652, 'T120141456111', '2014-05-16', 1),
+(807522652, 'T120141456111', '2014-05-18', 1),
+(865555544, 'N120143323940', '2014-05-23', 0),
+(865555544, 'T120141456111', '2014-05-16', 0),
+(865555544, 'T120141456111', '2014-05-18', 1),
+(873425261, 'N120143323940', '2014-05-20', 0),
+(873425261, 'N120143323940', '2014-05-23', 0),
+(873425261, 'T120141456111', '2014-05-18', 1),
+(986267238, 'N120143323940', '2014-05-23', 1),
+(986267238, 'T120141456111', '2014-05-16', 1),
+(986267238, 'T120141456111', '2014-05-18', 1),
+(1006575697, 'T220141456333', '2014-09-10', 0),
+(1118837113, 'T220141456333', '2014-09-10', 0),
+(1118841729, 'T220141456333', '2014-09-10', 0),
+(1118843631, 'N120143323940', '2014-10-27', 0),
+(1118843631, 'T220141456333', '2014-09-10', 0),
+(1118848872, 'T220141456333', '2014-09-10', 0),
+(1118852382, 'N120143323940', '2014-10-27', 0),
+(1118852382, 'T220141456333', '2014-09-10', 0),
+(1118852867, 'T220141456333', '2014-09-10', 0),
+(1124040635, 'T220141456333', '2014-09-10', 0),
+(1124044270, 'T220141456333', '2014-09-10', 0),
+(1372626998, 'N120143323940', '2014-05-23', 0),
+(1372626998, 'T120141456111', '2014-05-16', 1),
+(1372626998, 'T120141456111', '2014-05-18', 1),
+(5095473597, 'N120143323940', '2014-05-23', 0),
+(5095473597, 'T120141456111', '2014-05-16', 0),
+(5095473597, 'T120141456111', '2014-05-18', 1),
+(9000000000, 'N120143323940', '2014-05-20', 0),
+(94091503144, 'T220141456333', '2014-09-10', 0),
+(95101201709, 'T220141456333', '2014-09-10', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clase_as`
+--
+
+CREATE TABLE IF NOT EXISTS `clase_as` (
+  `codGrupo` varchar(30) NOT NULL,
+  `fechaClas` date NOT NULL,
+  PRIMARY KEY (`codGrupo`,`fechaClas`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `clase_as`
+--
+
+INSERT INTO `clase_as` (`codGrupo`, `fechaClas`) VALUES
+('N120143323940', '2014-05-20'),
+('N120143323940', '2014-05-23'),
+('N120143323940', '2014-10-27'),
+('N220141456930', '2014-10-29'),
+('T120141456111', '2014-05-16'),
+('T120141456111', '2014-05-18'),
+('T120141456111', '2014-05-19'),
+('T220141456333', '2014-09-10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `curso_as`
+--
+
+CREATE TABLE IF NOT EXISTS `curso_as` (
+  `codCurso` bigint(20) NOT NULL,
+  `nomCurso` varchar(70) NOT NULL,
+  PRIMARY KEY (`codCurso`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `curso_as`
+--
+
+INSERT INTO `curso_as` (`codCurso`, `nomCurso`) VALUES
+(1456, 'ING SISTEMAS'),
+(2755, 'ING INDUSTRIAL'),
+(3323, 'CONTADURIA'),
+(3642, 'ING AMBIENTAL'),
+(4213, 'FINANZAS Y COMERCIO INTERNACIONAL'),
+(4765, 'ING CIVIL'),
+(5978, 'ING MECANICA'),
+(9911, 'TRABAJO SOCIAL');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `docente_as`
+--
+
+CREATE TABLE IF NOT EXISTS `docente_as` (
+  `idDoc` bigint(20) NOT NULL,
+  `nomDoc` varchar(50) NOT NULL,
+  `apeDoc` varchar(50) NOT NULL,
+  PRIMARY KEY (`idDoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `docente_as`
+--
+
+INSERT INTO `docente_as` (`idDoc`, `nomDoc`, `apeDoc`) VALUES
+(11, 'AD', 'AD'),
+(111111, 'SANDRO DEIMER', 'DEMCHELLI BALE'),
+(112233, 'SR ADMINITRADOR', 'EL JEFE'),
+(123456, 'SR GLENN', 'JONSHON '),
+(999000, 'JAIR ENRRIQUE', 'SALCEDO ANDRADE');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estudiante_as`
+--
+
+CREATE TABLE IF NOT EXISTS `estudiante_as` (
+  `idEstu` bigint(20) NOT NULL,
+  `nomEstu` varchar(50) NOT NULL,
+  `apellEstu` varchar(50) NOT NULL,
+  PRIMARY KEY (`idEstu`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `estudiante_as`
+--
+
+INSERT INTO `estudiante_as` (`idEstu`, `nomEstu`, `apellEstu`) VALUES
+(114444, 'CARLOS', 'VARGAS OVIETA'),
+(198438, 'ABDIEL SALVADOR', 'ARCOS ALVAREZ'),
+(335268, 'GUILLERMO', 'AMARO RICO'),
+(498356, 'MARIANA', 'CARNALLA CORTES'),
+(574637, 'LAURA MIREYA', 'GUTIERREZ QUINTAL'),
+(692764, 'MONICA ITZURI', 'DELGADO CARRILLO'),
+(737526, 'CRISTINA', 'SOTO MENDOZA'),
+(852527, 'CARMEN DELIA', 'MARES OROSCO'),
+(920376, 'SARA MONICA', 'CORRALES MENDOZA'),
+(1052628, 'YURIRIA', 'ESTRADA HERNANDEZ'),
+(1112365, 'JOSE CARLOS', 'CAMARGO CAMARGO'),
+(1462668, 'MARA REGINA', 'RUEDA CONTRERAS'),
+(2374853, 'BORYANA CRISTINA', 'LOPEZ COLKOVSKA'),
+(9234442, 'ANA LUCIA', 'GARCIA PULIDO'),
+(10087367, 'JAIME ALFONSO', 'RODRIGUEZ SALDANA'),
+(12727223, 'ERNESTO DANIEL', 'HERRERA SALDANA'),
+(12830002, 'TERESA DE JESUS', 'BUENFIL GIL'),
+(17065652, 'GRACIELA ASTRID', 'REYES AHUMADA'),
+(31012014, 'ROBERT ', 'ESTRADA BUENO'),
+(40423967, 'JESSICA ', 'ALBA CUENTA'),
+(110832762, 'SOFIA MARGARITA', 'VERGARA ROBERTS'),
+(123456789, 'SAID ABDUL', 'GARCIAS LOPEZ'),
+(156728829, 'MIRNA LISSETTE', 'GOMEZ MORALES'),
+(166735423, 'EDGAR SAID', 'HERNANDEZ SANCHEZ '),
+(183439782, 'SOFIA', 'ORTEGA CASTILLO'),
+(190928428, 'MARGARITA', 'SOTO SUAREZ'),
+(208438770, 'FANCISCO ISAAC', 'GOMEZ MARQUEZ'),
+(300687267, 'MARIA', 'DE LA MORA CONDE'),
+(609835887, 'MEGAN', 'FOX ROMERO'),
+(704863733, 'BRITNEY', 'JEAN SPEARS'),
+(807522652, 'ELMER', 'FIGUEROA OCHOA'),
+(865555544, 'ROSA MARGARITA', 'PETALOS GIRASOL'),
+(873425261, 'EMMA SOFIA', 'WHATSON RENTERIA'),
+(986267238, 'BEYONCE GISELLE', 'KNOWLES SMIT'),
+(1006575697, 'MANUEL ANTONIO', 'LOPESIERRA SOTO'),
+(1118837113, 'JUAN DAVID', 'REDONDO ROBLES'),
+(1118841729, 'DANIEL ANDRES', 'MARTINEZ QUINTERO'),
+(1118843631, 'CESAR ENRRIQUE', 'NAVARRO SALCRDO'),
+(1118848872, 'JAIME ANDRES', 'BAUTISTA BUSTAMANTE'),
+(1118852382, 'CRISRIAN GIOVANNI', 'RIVEROS VALENCIA'),
+(1118852867, 'ROBERT SMITH', 'MOTERROSA ARCINIEGA'),
+(1124040635, 'JOSE RAFAEL', 'ONATE HENRRIQUEZ'),
+(1124044270, 'MAGER', 'GUTIERREZ ALFARO'),
+(1372626998, 'EDGAR ', 'BERNAL RAMIREZ'),
+(5095473597, 'MARIO', 'BALOTELLI MORENO'),
+(9000000000, 'EMMANUEL EDUARDO', 'ESCAJADILLO GAMA'),
+(92031653217, 'JONAN', 'HEZ MATA'),
+(94091503144, 'JAIDER CALEB', 'SIERRA JULIO'),
+(95101201709, 'JEANCARLOS MEYER', 'FONTALVO MEJIA');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `grupo_as`
+--
+
+CREATE TABLE IF NOT EXISTS `grupo_as` (
+  `codGrupo` varchar(30) NOT NULL,
+  `codCurso` bigint(20) NOT NULL COMMENT 'codigo del curso o programa',
+  `codMate` bigint(20) NOT NULL,
+  `ano` int(11) NOT NULL,
+  `periodo` int(11) DEFAULT NULL COMMENT 'periodo o semestre',
+  `jornada` varchar(10) DEFAULT NULL,
+  `idDoc` bigint(20) NOT NULL,
+  PRIMARY KEY (`codGrupo`),
+  KEY `idDoc` (`idDoc`),
+  KEY `codCurso` (`codCurso`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `grupo_as`
+--
+
+INSERT INTO `grupo_as` (`codGrupo`, `codCurso`, `codMate`, `ano`, `periodo`, `jornada`, `idDoc`) VALUES
+('M120141456999', 1456, 999, 2014, 1, 'MANANA', 123456),
+('N120141456444', 1456, 444, 2014, 1, 'NOCHE', 123456),
+('N120143323940', 3323, 940, 2014, 1, 'NOCHE', 112233),
+('N220141456930', 1456, 930, 2014, 2, 'NOCHE', 123456),
+('T120141456111', 1456, 111, 2014, 1, 'TARDE', 123456),
+('T220141456333', 1456, 333, 2014, 2, 'TARDE', 999000);
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `acceso_as`
+--
+ALTER TABLE `acceso_as`
+  ADD CONSTRAINT `acceso_as_ibfk_1` FOREIGN KEY (`idDoc`) REFERENCES `docente_as` (`idDoc`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `asignatura_as`
+--
+ALTER TABLE `asignatura_as`
+  ADD CONSTRAINT `asignatura_as_ibfk_1` FOREIGN KEY (`codCurso`) REFERENCES `curso_as` (`codCurso`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `asistencia_as`
+--
+ALTER TABLE `asistencia_as`
+  ADD CONSTRAINT `asistencia_as_ibfk_1` FOREIGN KEY (`idEstu`) REFERENCES `estudiante_as` (`idEstu`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `asistencia_as_ibfk_2` FOREIGN KEY (`codGrupo`) REFERENCES `grupo_as` (`codGrupo`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `clase_as`
+--
+ALTER TABLE `clase_as`
+  ADD CONSTRAINT `clase_as_ibfk_1` FOREIGN KEY (`codGrupo`) REFERENCES `grupo_as` (`codGrupo`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `grupo_as`
+--
+ALTER TABLE `grupo_as`
+  ADD CONSTRAINT `grupo_as_ibfk_3` FOREIGN KEY (`idDoc`) REFERENCES `docente_as` (`idDoc`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `grupo_as_ibfk_4` FOREIGN KEY (`codCurso`) REFERENCES `curso_as` (`codCurso`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

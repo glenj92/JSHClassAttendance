@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_amarillo" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1infornombreidentestudiante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de estudiante"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/textView1barrainfoestudiante"
+                android:layout_width="match_parent"
+                android:layout_height="8px"
+                android:background="@drawable/solid_backgrounds" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30px"
+                android:onClick="grafica"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="serif" 
+                android:background="@drawable/button_green"
+                android:text="Grafica" />
+
+            <Button
+                android:id="@+id/button1asisestu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_margin="30px"
+                android:background="@drawable/button_blue"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="serif" 
+                android:text="Dias de asistencias" />
+
+            <Button
+                android:id="@+id/button2excuestu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_margin="30px"
+                android:background="@drawable/button_violet"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="serif" 
+                android:text="Dias de excusas" />
+
+            <Button
+                android:id="@+id/button3fallasestu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:layout_margin="30px"
+                android:background="@drawable/button_red"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="serif" 
+                android:text="Dias de fallas" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

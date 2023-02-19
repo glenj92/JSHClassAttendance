@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+     <item android:id="@+id/cambiar_a_faltas" 
+        android:title="Cambiar a falla" 
+        android:showAsAction="always" 
+         android:icon="@android:drawable/ic_delete"
+         android:orderInCategory="100"></item>
+    
+    <item android:id="@+id/cambiar_a_asis" 
+        android:title="Cambiar a asistencia" 
+         android:icon="@android:drawable/ic_input_add"
+        android:showAsAction="always"></item>
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/cambiar_a_assistencias" 
+        android:title="Cambiar a asistencia" 
+        android:showAsAction="always" 
+         android:icon="@android:drawable/ic_input_add"
+         android:orderInCategory="100"></item>
+    
+    <item android:id="@+id/cambiar_a_exxcusass" 
+        android:title="Cambiar a excusa" 
+         android:icon="@android:drawable/ic_input_get"
+        android:showAsAction="always"></item>
+
+</menu>

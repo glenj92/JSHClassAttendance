@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/simple_stylish_background" >
+<ListView
+        android:id="@+id/lvmate"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:layout_above="@+id/tvgrupolistafecha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvmaterialistafecha" >
+
+    </ListView>
+
+<TextView
+    android:id="@+id/tvmaterialistafecha"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/canvas_darkblue"
+    android:gravity="center"
+    android:text="Materias"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="#ffffff" />
+
+    <ListView
+        android:id="@+id/lvgrupo"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvgrupolistafecha" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvgrupolistafecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/canvas_darkblue"
+        android:gravity="center"
+        android:text="Grupos"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+    
+
+</RelativeLayout>

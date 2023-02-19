@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_weight="0.03" >
+
+            <TextView
+                android:id="@+id/tvnoIdentDt"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No IDENTIDAD"
+                android:textColor="#FF4000"
+                android:textSize="13sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvApeDt"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="APELLIDO"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNomDt"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                android:text="NOMBRE"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvralla2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="#99CC00"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvnoAsisDt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#0101DF"
+                android:text="No ASIS"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvnoFallaDt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No FALL"
+                android:textColor="#cc181e"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvnoExcuDt"
+                android:layout_width="70dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="#DF0174"
+                android:text="No EXC"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</RelativeLayout>

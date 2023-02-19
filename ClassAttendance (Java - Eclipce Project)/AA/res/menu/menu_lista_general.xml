@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/atraslistge" 
+        android:showAsAction="always" 
+        android:title="Atras"
+        android:icon="@android:drawable/ic_menu_revert"></item>
+    
+    <item android:id="@+id/azarrestu" 
+        android:title="Estuduante al Azar" 
+        android:showAsAction="always"
+        android:icon="@drawable/dados"></item>
+    
+    <item android:id="@+id/graficaagrupo" 
+        android:title="Grafica del Grupo" 
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_sort_by_size"></item>
+    
+    
+
+</menu>

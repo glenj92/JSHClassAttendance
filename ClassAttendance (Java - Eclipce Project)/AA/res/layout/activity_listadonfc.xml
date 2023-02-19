@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/canvas_darkblue">
+
+   <ViewFlipper android:id="@+id/viewFlippernfc"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+         >
+ 
+        <include layout="@layout/listadonfc"/>
+        <include layout="@layout/listamatenfc"/>
+        <include layout="@layout/listagrupnfc"/>
+        <include layout="@layout/buscar_estudiante_nfc"/>
+ 
+        
+ 
+    </ViewFlipper>
+
+</RelativeLayout>
